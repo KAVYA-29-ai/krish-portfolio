@@ -403,6 +403,36 @@
             text-decoration: none;
         }
 
+        /* --- Team Pyramid Structure --- */
+        .team-pyramid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .team-pyramid .leader-card {
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .team-pyramid .other-members {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .team-pyramid .other-members .card {
+            flex: 1;
+            max-width: 320px;
+            text-align: center;
+        }
+
         /* --- Animations --- */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -450,6 +480,15 @@
             }
             .about-grid {
                 gap: 20px;
+            }
+            .team-pyramid .other-members {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-pyramid .leader-card,
+            .team-pyramid .other-members .card {
+                max-width: 90%;
+                width: 100%;
             }
         }
     </style>
@@ -591,26 +630,28 @@
     
     <section id="team">
         <h2 class="section-title">Meet Team Null</h2>
-        <div class="card-grid">
-            <div class="card team-member">
+        <div class="team-pyramid">
+            <div class="leader-card card team-member">
                 <h3>Krish Choudhary</h3>
                 <p><b>Team Lead & Visionary:</b> I guide the team's strategic direction and ensure our projects align with real-world needs.</p>
                 <a href="https://www.linkedin.com/in/krish-choudhary-55b9a030b" class="link" target="_blank">LinkedIn</a>
             </div>
-            <div class="card team-member">
-                <h3>Kavya Rajput</h3>
-                <p><b>Front-End Developer:</b> Kavya builds robust, responsive, and visually stunning user interfaces that bring our projects to life.</p>
-                <a href="https://www.linkedin.com/in/kavya-rajput-431055370" class="link" target="_blank">LinkedIn</a>
-            </div>
-            <div class="card team-member">
-                <h3>Krishna Mishra</h3>
-                <p><b>Back-End Engineer:</b> Krishna handles our data management and API integrations, ensuring a seamless and efficient backend.</p>
-                <a href="https://www.linkedin.com/in/krishna-mishra-107363326" class="link" target="_blank">LinkedIn</a>
-            </div>
-            <div class="card team-member">
-                <h3>Shivansh Tripathi</h3>
-                <p><b>Strategic Advisor:</b> Shivansh provides critical insights and optimizes our workflows to drive project success and innovation.</p>
-                <a href="https://www.linkedin.com/in/shivansh-tripathi-942882329" class="link" target="_blank">LinkedIn</a>
+            <div class="other-members">
+                <div class="card team-member">
+                    <h3>Kavya Rajput</h3>
+                    <p><b>Front-End Developer:</b> Kavya builds robust, responsive, and visually stunning user interfaces that bring our projects to life.</p>
+                    <a href="https://www.linkedin.com/in/kavya-rajput-431055370" class="link" target="_blank">LinkedIn</a>
+                </div>
+                <div class="card team-member">
+                    <h3>Krishna Mishra</h3>
+                    <p><b>Back-End Engineer:</b> Krishna handles our data management and API integrations, ensuring a seamless and efficient backend.</p>
+                    <a href="https://www.linkedin.com/in/krishna-mishra-107363326" class="link" target="_blank">LinkedIn</a>
+                </div>
+                <div class="card team-member">
+                    <h3>Shivansh Tripathi</h3>
+                    <p><b>Strategic Advisor:</b> Shivansh provides critical insights and optimizes our workflows to drive project success and innovation.</p>
+                    <a href="https://www.linkedin.com/in/shivansh-tripathi-942882329" class="link" target="_blank">LinkedIn</a>
+                </div>
             </div>
         </div>
     </section>
