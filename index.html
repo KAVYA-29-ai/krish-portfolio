@@ -216,9 +216,9 @@
             gap: 30px;
             align-items: start;
         }
-        .about-grid > div:first-child p { /* Target the main descriptive paragraph */
-            font-size: 1.15em; /* Increased font size */
-            line-height: 1.8; /* Increased line height for readability */
+        .about-grid > div:first-child p {
+            font-size: 1.15em;
+            line-height: 1.8;
             color: #c9d1d9;
         }
         .about-info-card {
@@ -245,15 +245,9 @@
             align-items: center;
             font-size: 1.2em;
             margin-right: 15px;
-            background: linear-gradient(45deg, #e340ff, #ff6c63);
             color: #fff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
-        /* Specific gradient for "My Approach" icon */
-        .about-info-card:first-child .icon-wrapper {
-            background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to Orange */
-        }
-
         .about-info-card .text-content {
             flex-grow: 1;
         }
@@ -265,11 +259,30 @@
         .about-info-card p {
             margin: 0;
             color: #b1b1b1;
-            font-size: 1em; /* Increased font size for content within cards */
+            font-size: 1em;
         }
-        .about-pills { /* Removed as pills are now integrated into cards */
-            display: none; 
+        .about-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
         }
+        .pill {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6c63, #e340ff);
+            transition: transform 0.2s ease;
+        }
+        .pill:hover {
+            transform: scale(1.05);
+        }
+        .pill:nth-child(1) { background: linear-gradient(90deg, #ff40e3, #ff6c63); }
+        .pill:nth-child(2) { background: linear-gradient(90deg, #6c63ff, #e340ff); }
+        .pill:nth-child(3) { background: linear-gradient(90deg, #40ff8e, #6c63ff); }
+        .pill:nth-child(4) { background: linear-gradient(90deg, #ff8c40, #ff6c63); }
 
         .achievement-card {
             background-color: rgba(20, 20, 25, 0.8);
@@ -312,6 +325,16 @@
             font-size: 1.2em;
             line-height: 1;
         }
+        
+        .achievement-grid-left {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: 0;
+        }
+        
         @media (max-width: 768px) {
             .header-section {
                 flex-direction: column;
@@ -403,14 +426,11 @@
         <div class="about-grid">
             <div>
                 <p>I'm a passionate **B.Tech student** with a strong foundation in technology and a drive for continuous learning and innovation. As the **leader of Team Null**, I focus on building skills in emerging technologies, earning industry certifications, and creating projects that solve real-world problems.</p>
-                <div class="about-info-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <div class="text-content">
-                        <h4>My Approach</h4>
-                        <p>Goal Oriented, Quick Learner, Tech Focused, Innovation Driven</p>
-                    </div>
+                <div class="about-pills">
+                    <span class="pill">Goal Oriented</span>
+                    <span class="pill">Quick Learner</span>
+                    <span class="pill">Tech Focused</span>
+                    <span class="pill">Innovation Driven</span>
                 </div>
             </div>
             <div>
@@ -508,7 +528,7 @@
 
     <section id="achievements">
         <h2 class="section-title">Achievements & Certifications</h2>
-        <div class="card-grid">
+        <div class="achievement-grid-left">
             <div class="achievement-card">
                 <h4>Artificial Intelligence & Machine Learning</h4>
                 <ul>
@@ -572,7 +592,7 @@
 
 <footer class="footer">
     <p>Made by Team Null</p>
-    <p class="footer-small-text">Made by Team Member: Kavya (<a href="linkedin.com/in/kavya-rajput-431055370" style="color:#777;">Developer</a>)</p>
+    <p class="footer-small-text">Made by Team Member: Kavya (<a href="mailto:krishchaudhary03255@gmail.com" style="color:#777;">krishchaudhary03255@gmail.com</a>)</p>
 </footer>
 
 </body>
