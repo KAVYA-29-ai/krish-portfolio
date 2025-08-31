@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0A0A0E;
+            background-color: #0A0A0E; /* Darker, more subtle background */
             color: #e6edf3;
             margin: 0;
             padding: 0;
@@ -25,7 +25,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(10, 10, 14, 0.95);
+            background-color: rgba(10, 10, 14, 0.95); /* Slightly transparent dark background */
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 15px 0;
@@ -44,7 +44,7 @@
             transition: color 0.3s ease, transform 0.2s ease;
         }
         nav a:hover {
-            color: #a879ff;
+            color: #a879ff; /* Brighter hover color */
             transform: translateY(-2px);
         }
         .header-section {
@@ -56,7 +56,7 @@
             position: relative;
             flex-wrap: wrap;
             text-align: left;
-            padding-top: 80px;
+            padding-top: 80px; /* Space for fixed navbar */
         }
         .header-content {
             flex: 1;
@@ -64,25 +64,25 @@
             padding-right: 40px;
         }
         .header-section h1 {
-            font-size: 4.8em;
+            font-size: 4.8em; /* Slightly larger font */
             margin-bottom: 5px;
-            background: linear-gradient(90deg, #8c63ff, #ff40e3);
+            background: linear-gradient(90deg, #8c63ff, #ff40e3); /* More vibrant gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: left;
         }
         .header-section .subtitle {
-            font-size: 1.5em;
+            font-size: 1.5em; /* Slightly larger */
             color: #b1b1b1;
             margin-bottom: 25px;
             text-align: left;
         }
         .header-section .intro-text {
-            font-size: 1.15em;
+            font-size: 1.15em; /* Slightly larger */
             margin-top: 20px;
             max-width: 700px;
             text-align: left;
-            color: #c9d1d9;
+            color: #c9d1d9; /* Lighter text for readability */
         }
         .spline-container {
             flex: 1;
@@ -99,59 +99,59 @@
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-radius: 15px; /* Softer corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow */
             transition: transform 0.4s ease;
         }
         .spline-iframe:hover {
-            transform: scale(1.02);
+            transform: scale(1.02); /* Subtle hover effect */
         }
         .section-title {
             text-align: center;
-            font-size: 3em;
-            margin-bottom: 50px;
+            font-size: 3em; /* Larger title */
+            margin-bottom: 50px; /* More space below title */
             background: linear-gradient(90deg, #6c63ff, #e340ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            padding-top: 80px;
+            padding-top: 80px; /* Space from previous section/navbar */
             font-weight: 700;
         }
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            gap: 30px; /* More gap */
+            margin-bottom: 60px; /* More space below grid */
         }
         .card {
-            background-color: rgba(20, 20, 25, 0.8);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(40, 40, 50, 0.6);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            background-color: rgba(20, 20, 25, 0.8); /* Slightly more transparent */
+            padding: 30px; /* More padding */
+            border-radius: 15px; /* Softer corners */
+            border: 1px solid rgba(40, 40, 50, 0.6); /* Refined border */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow */
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
         .card:hover {
-            transform: translateY(-15px) scale(1.01);
+            transform: translateY(-15px) scale(1.01); /* More pronounced hover */
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
         }
         .card h3 {
             margin-top: 0;
-            background: linear-gradient(90deg, #ff40e3, #ff6c63);
+            background: linear-gradient(90deg, #ff40e3, #ff6c63); /* More vibrant gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 1.4em;
+            font-size: 1.4em; /* Larger card title */
         }
         .card p {
-            color: #c9d1d9;
+            color: #c9d1d9; /* Lighter text for readability */
         }
         .link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
+            margin-top: 20px; /* More space */
+            padding: 12px 25px; /* Larger button */
             background: linear-gradient(90deg, #6c63ff, #e340ff);
             color: #ffffff;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 10px; /* Softer button corners */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             font-weight: 600;
         }
@@ -162,21 +162,21 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 30px; /* More gap */
+            margin-top: 40px; /* More space */
         }
         .team-pyramid {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 25px;
+            gap: 25px; /* Consistent gap */
             margin-bottom: 60px;
         }
         .team-pyramid .leader-card {
             width: 100%;
-            max-width: 450px;
-            padding: 35px;
+            max-width: 450px; /* Slightly wider */
+            padding: 35px; /* More padding */
         }
         .team-pyramid .other-members {
             display: flex;
@@ -186,10 +186,10 @@
         }
         .team-pyramid .other-members .card {
             flex: 1;
-            max-width: 320px;
+            max-width: 320px; /* Consistent size */
         }
         .team-member h3 {
-            margin-bottom: 8px;
+            margin-bottom: 8px; /* More space */
             font-size: 1.3em;
         }
         .team-member p {
@@ -199,32 +199,32 @@
         }
         .footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 30px 0; /* More padding */
             font-size: 0.9em;
             color: #777;
-            margin-top: 50px;
-            border-top: 1px solid rgba(40, 40, 50, 0.4);
+            margin-top: 50px; /* More space above footer */
+            border-top: 1px solid rgba(40, 40, 50, 0.4); /* Subtle top border */
         }
         .footer-small-text {
-            font-size: 0.75em;
+            font-size: 0.75em; /* Slightly larger */
             margin-top: 8px;
             color: #555;
         }
         .about-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 30px;
+            gap: 30px; /* More gap */
             align-items: start;
         }
         .about-info-card {
             background-color: rgba(20, 20, 25, 0.8);
-            padding: 25px;
+            padding: 25px; /* More padding */
             border-radius: 12px;
             border: 1px solid rgba(40, 40, 50, 0.6);
             margin-bottom: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            align-items: center;
+            display: flex; /* Flexbox for icon and text */
+            align-items: center; /* Vertically align icon and text */
         }
         .about-info-card:hover {
             transform: translateY(-8px);
@@ -233,23 +233,23 @@
         .about-info-card .icon-wrapper {
             width: 40px;
             height: 40px;
-            min-width: 40px;
+            min-width: 40px; /* Prevent shrinking */
             border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 1.2em;
-            margin-right: 15px;
-            background: linear-gradient(45deg, #e340ff, #ff6c63);
+            margin-right: 15px; /* Space between icon and text */
+            background: linear-gradient(45deg, #e340ff, #ff6c63); /* Dynamic gradient for icons */
             color: #fff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         .about-info-card .text-content {
-            flex-grow: 1;
+            flex-grow: 1; /* Allow text to take remaining space */
         }
         .about-info-card h4 {
             margin: 0 0 5px;
-            color: #a879ff;
+            color: #a879ff; /* Brighter color */
             font-size: 1.1em;
         }
         .about-info-card p {
@@ -260,12 +260,12 @@
         .about-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 12px; /* More gap */
             margin-top: 25px;
         }
         .pill {
-            padding: 9px 18px;
-            border-radius: 25px;
+            padding: 9px 18px; /* Larger pills */
+            border-radius: 25px; /* More rounded */
             font-size: 0.95em;
             font-weight: 600;
             color: #fff;
@@ -312,13 +312,14 @@
             padding-left: 20px;
         }
         .achievement-card li::before {
-            content: '•';
-            color: #8c63ff;
+            content: '•'; /* Bullet point */
+            color: #8c63ff; /* Matching color */
             position: absolute;
             left: 0;
             font-size: 1.2em;
             line-height: 1;
         }
+
         @media (max-width: 768px) {
             .header-section {
                 flex-direction: column;
@@ -333,7 +334,7 @@
             .spline-container {
                 order: 1;
                 min-width: unset;
-                height: 300px;
+                height: 300px; /* Slightly smaller height on mobile */
                 margin-bottom: 0;
                 padding-left: 0;
             }
@@ -409,15 +410,12 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-grid">
             <div>
-                <p>I'm a passionate **B.Tech student** with a strong foundation in technology and a drive for continuous learning and innovation. As the **leader of Team Null**, I focus on building skills in emerging technologies, earning industry certifications, and creating projects that solve real-world problems.</p>
-                <div class="about-info-card">
-                    <div class="icon-wrapper" style="background: linear-gradient(45deg, #1e90ff, #00bfff);">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <div class="text-content">
-                        <h4>My Approach</h4>
-                        <p>Goal Oriented, Quick Learner, Tech Focused, Innovation Driven</p>
-                    </div>
+                <p>I'm a passionate **B.Tech student** with a strong foundation in technology and a drive for continuous learning and innovation. My journey involves building skills across various technologies, earning industry certifications, and creating projects that solve real-world problems.</p>
+                <div class="about-pills">
+                    <span class="pill">Goal Oriented</span>
+                    <span class="pill">Quick Learner</span>
+                    <span class="pill">Tech Focused</span>
+                    <span class="pill">Innovation Driven</span>
                 </div>
             </div>
             <div>
