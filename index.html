@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0d1117;
+            background-color: #0A0A0E; /* Darker, more subtle background */
             color: #e6edf3;
             margin: 0;
             padding: 0;
@@ -24,11 +24,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(13, 17, 23, 0.9);
+            background-color: rgba(10, 10, 14, 0.95); /* Slightly transparent dark background */
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
         }
         nav .nav-container {
             display: flex;
@@ -40,10 +40,11 @@
             text-decoration: none;
             padding: 10px 20px;
             font-size: 1em;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.2s ease;
         }
         nav a:hover {
-            color: #8c88ff;
+            color: #a879ff; /* Brighter hover color */
+            transform: translateY(-2px);
         }
         .header-section {
             display: flex;
@@ -54,6 +55,7 @@
             position: relative;
             flex-wrap: wrap;
             text-align: left;
+            padding-top: 80px; /* Space for fixed navbar */
         }
         .header-content {
             flex: 1;
@@ -61,24 +63,25 @@
             padding-right: 40px;
         }
         .header-section h1 {
-            font-size: 4.5em;
+            font-size: 4.8em; /* Slightly larger font */
             margin-bottom: 5px;
-            background: linear-gradient(90deg, #6c63ff, #e340ff);
+            background: linear-gradient(90deg, #8c63ff, #ff40e3); /* More vibrant gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: left;
         }
         .header-section .subtitle {
-            font-size: 1.4em;
+            font-size: 1.5em; /* Slightly larger */
             color: #b1b1b1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: left;
         }
         .header-section .intro-text {
-            font-size: 1.1em;
+            font-size: 1.15em; /* Slightly larger */
             margin-top: 20px;
             max-width: 700px;
             text-align: left;
+            color: #c9d1d9; /* Lighter text for readability */
         }
         .spline-container {
             flex: 1;
@@ -89,208 +92,269 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-        .spline-container h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            background: linear-gradient(90deg, #e340ff, #6c63ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
+            padding-left: 20px;
         }
         .spline-iframe {
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 15px; /* Softer corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+            transition: transform 0.4s ease;
+        }
+        .spline-iframe:hover {
+            transform: scale(1.02); /* Subtle hover effect */
         }
         .section-title {
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
+            font-size: 3em; /* Larger title */
+            margin-bottom: 50px; /* More space below title */
             background: linear-gradient(90deg, #6c63ff, #e340ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            padding-top: 60px;
+            padding-top: 80px; /* Space from previous section/navbar */
+            font-weight: 700;
         }
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            gap: 30px; /* More gap */
+            margin-bottom: 60px; /* More space below grid */
         }
         .card {
-            background-color: rgba(26, 28, 37, 0.7);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid rgba(51, 51, 51, 0.5);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(20, 20, 25, 0.8); /* Slightly more transparent */
+            padding: 30px; /* More padding */
+            border-radius: 15px; /* Softer corners */
+            border: 1px solid rgba(40, 40, 50, 0.6); /* Refined border */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
         .card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transform: translateY(-15px) scale(1.01); /* More pronounced hover */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
         }
         .card h3 {
             margin-top: 0;
-            background: linear-gradient(90deg, #e340ff, #ff6c63);
+            background: linear-gradient(90deg, #ff40e3, #ff6c63); /* More vibrant gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-size: 1.4em; /* Larger card title */
+        }
+        .card p {
+            color: #c9d1d9; /* Lighter text for readability */
         }
         .link {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
+            margin-top: 20px; /* More space */
+            padding: 12px 25px; /* Larger button */
             background: linear-gradient(90deg, #6c63ff, #e340ff);
             color: #ffffff;
             text-decoration: none;
-            border-radius: 8px;
-            transition: opacity 0.3s;
+            border-radius: 10px; /* Softer button corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 600;
         }
         .link:hover {
-            opacity: 0.8;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
         }
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 30px; /* More gap */
+            margin-top: 40px; /* More space */
         }
         .team-pyramid {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 20px;
+            gap: 25px; /* Consistent gap */
+            margin-bottom: 60px;
         }
         .team-pyramid .leader-card {
             width: 100%;
-            max-width: 400px;
-            margin-bottom: 20px;
+            max-width: 450px; /* Slightly wider */
+            padding: 35px; /* More padding */
         }
         .team-pyramid .other-members {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         .team-pyramid .other-members .card {
             flex: 1;
-            max-width: 300px;
+            max-width: 320px; /* Consistent size */
         }
         .team-member h3 {
-            margin-bottom: 5px;
+            margin-bottom: 8px; /* More space */
+            font-size: 1.3em;
         }
         .team-member p {
             margin-top: 0;
             color: #a1a1a1;
+            font-size: 0.95em;
         }
         .footer {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0; /* More padding */
             font-size: 0.9em;
             color: #777;
+            margin-top: 50px; /* More space above footer */
+            border-top: 1px solid rgba(40, 40, 50, 0.4); /* Subtle top border */
         }
         .footer-small-text {
-            font-size: 0.7em;
-            margin-top: 5px;
+            font-size: 0.75em; /* Slightly larger */
+            margin-top: 8px;
             color: #555;
         }
         .about-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 25px;
+            gap: 30px; /* More gap */
             align-items: start;
         }
         .about-info-card {
-            background-color: rgba(26, 28, 37, 0.7);
-            padding: 20px;
+            background-color: rgba(20, 20, 25, 0.8);
+            padding: 25px; /* More padding */
             border-radius: 12px;
-            border: 1px solid rgba(51, 51, 51, 0.5);
+            border: 1px solid rgba(40, 40, 50, 0.6);
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .about-info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
         .about-info-card h4 {
-            margin: 0 0 5px;
-            color: #8c88ff;
+            margin: 0 0 8px;
+            color: #a879ff; /* Brighter color */
+            font-size: 1.1em;
         }
         .about-info-card p {
             margin: 0;
             color: #b1b1b1;
-        }
-        .about-info-card:hover {
-            transform: translateY(-5px);
+            font-size: 0.95em;
         }
         .about-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 12px; /* More gap */
+            margin-top: 25px;
         }
         .pill {
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
+            padding: 9px 18px; /* Larger pills */
+            border-radius: 25px; /* More rounded */
+            font-size: 0.95em;
+            font-weight: 600;
             color: #fff;
             background: linear-gradient(90deg, #ff6c63, #e340ff);
+            transition: transform 0.2s ease;
+        }
+        .pill:hover {
+            transform: scale(1.05);
         }
         .pill:nth-child(2) { background: linear-gradient(90deg, #6c63ff, #e340ff); }
         .pill:nth-child(3) { background: linear-gradient(90deg, #40ff8e, #6c63ff); }
         .pill:nth-child(4) { background: linear-gradient(90deg, #ff8c40, #ff6c63); }
         .achievement-card {
-            background-color: rgba(26, 28, 37, 0.7);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid rgba(51, 51, 51, 0.5);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(20, 20, 25, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(40, 40, 50, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
             text-align: left;
         }
         .achievement-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
         }
         .achievement-card h4 {
             margin-top: 0;
             background: linear-gradient(90deg, #e340ff, #ff6c63);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-size: 1.3em;
+            margin-bottom: 15px;
         }
         .achievement-card ul {
             list-style: none;
             padding: 0;
-            margin: 10px 0 0;
+            margin: 0;
         }
         .achievement-card li {
-            margin-bottom: 5px;
-            font-size: 0.9em;
+            margin-bottom: 8px;
+            font-size: 0.95em;
             color: #b1b1b1;
+            position: relative;
+            padding-left: 20px;
+        }
+        .achievement-card li::before {
+            content: '•'; /* Bullet point */
+            color: #8c63ff; /* Matching color */
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            line-height: 1;
         }
 
         @media (max-width: 768px) {
             .header-section {
                 flex-direction: column;
                 text-align: center;
+                padding-top: 100px;
             }
             .header-content {
                 padding-right: 0;
                 order: 2;
+                margin-top: 30px;
             }
             .spline-container {
                 order: 1;
                 min-width: unset;
-                height: 350px;
-                margin-bottom: 30px;
+                height: 300px; /* Slightly smaller height on mobile */
+                margin-bottom: 0;
+                padding-left: 0;
             }
-            .header-section h1, .header-section .subtitle, .header-section .intro-text {
+            .header-section h1 {
+                font-size: 3em;
                 text-align: center;
+            }
+            .header-section .subtitle, .header-section .intro-text {
+                text-align: center;
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2.2em;
+                padding-top: 60px;
+                margin-bottom: 30px;
             }
             .about-grid {
                 grid-template-columns: 1fr;
             }
-            .section-title {
-                padding-top: 40px;
+            .card-grid {
+                gap: 20px;
+            }
+            .team-pyramid .leader-card {
+                max-width: 90%;
+                padding: 25px;
+            }
+            .team-pyramid .other-members {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-pyramid .other-members .card {
+                max-width: 90%;
+            }
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .link {
+                width: 80%;
+                margin: 0 auto;
             }
         }
     </style>
@@ -318,7 +382,6 @@
             </p>
         </div>
         <div class="spline-container">
-            <h2>The Leader of Team Null with AI Robot</h2>
             <iframe src='https://my.spline.design/chatgptkeyboard-fg4mi05If590oMo096YL3S9k/' frameborder='0' class='spline-iframe'></iframe>
         </div>
     </section>
@@ -361,23 +424,23 @@
         <div class="team-pyramid">
             <div class="leader-card card team-member">
                 <h3>Krish Choudhary</h3>
-                <p>The Leader</p>
+                <p>Leading the vision and strategy for Team Null's innovative projects.</p>
                 <a href="https://www.linkedin.com/in/krish-choudhary-55b9a030b" class="link" target="_blank">LinkedIn</a>
             </div>
             <div class="other-members">
                 <div class="card team-member">
                     <h3>Kavya Rajput</h3>
-                    <p>Developer</p>
+                    <p>Building robust and responsive web applications with cutting-edge front-end technologies.</p>
                     <a href="https://www.linkedin.com/in/kavya-rajput-431055370" class="link" target="_blank">LinkedIn</a>
                 </div>
                 <div class="card team-member">
                     <h3>Krishna Mishra</h3>
-                    <p>Database Handler</p>
+                    <p>Ensuring efficient data management and seamless integration for all project backends.</p>
                     <a href="https://www.linkedin.com/in/krishna-mishra-107363326" class="link" target="_blank">LinkedIn</a>
                 </div>
                 <div class="card team-member">
                     <h3>Shivansh Tripathi</h3>
-                    <p>Decision Helper</p>
+                    <p>Guiding strategic choices and optimizing workflows for project success.</p>
                     <a href="https://www.linkedin.com/in/shivansh-tripathi-942882329" class="link" target="_blank">LinkedIn</a>
                 </div>
             </div>
@@ -473,7 +536,7 @@
 
 <footer class="footer">
     <p>Made by Team Null</p>
-    <p class="footer-small-text">Made by Team Member: Kavya (<a href="mailto:krishchaudhary03255@gmail.com" style="color:#777;">krishchaudhary03255@gmail.com</a>)</p>
+    <p class="footer-small-text">Made by Team Member: Kavya (<a href="linkedin.com/in/kavya-rajput-431055370" style="color:#777;">Developer</a>)</p>
 </footer>
 
 </body>
