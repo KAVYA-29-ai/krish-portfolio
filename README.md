@@ -1,2 +1,601 @@
 # krish-portfolio
 my best friend krish chaudhary portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish Choudhary - Team Null Leader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0A0E;
+            color: #e6edf3;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 14, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        nav .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a {
+            color: #e6edf3;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            color: #a879ff;
+            transform: translateY(-2px);
+        }
+        .header-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 0 20px;
+            position: relative;
+            flex-wrap: wrap;
+            text-align: left;
+            padding-top: 80px;
+        }
+        .header-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        .header-section h1 {
+            font-size: 4.8em;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, #8c63ff, #ff40e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+        }
+        .header-section .subtitle {
+            font-size: 1.5em;
+            color: #b1b1b1;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .header-section .intro-text {
+            font-size: 1.15em;
+            margin-top: 20px;
+            max-width: 700px;
+            text-align: left;
+            color: #c9d1d9;
+        }
+        .spline-container {
+            flex: 1;
+            min-width: 400px;
+            height: 500px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 20px;
+        }
+        .spline-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease;
+        }
+        .spline-iframe:hover {
+            transform: scale(1.02);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #6c63ff, #e340ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-top: 80px;
+            font-weight: 700;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .card {
+            background-color: rgba(20, 20, 25, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(40, 40, 50, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-15px) scale(1.01);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+        }
+        .card h3 {
+            margin-top: 0;
+            background: linear-gradient(90deg, #ff40e3, #ff6c63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.4em;
+        }
+        .card p {
+            color: #c9d1d9;
+        }
+        .link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #6c63ff, #e340ff);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 600;
+        }
+        .link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .team-pyramid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .team-pyramid .leader-card {
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+        }
+        .team-pyramid .other-members {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .team-pyramid .other-members .card {
+            flex: 1;
+            max-width: 320px;
+        }
+        .team-member h3 {
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+        .team-member p {
+            margin-top: 0;
+            color: #a1a1a1;
+            font-size: 0.95em;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 50px;
+            border-top: 1px solid rgba(40, 40, 50, 0.4);
+        }
+        .footer-small-text {
+            font-size: 0.75em;
+            margin-top: 8px;
+            color: #555;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        .about-grid > div:first-child p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #c9d1d9;
+        }
+        .about-info-card {
+            background-color: rgba(20, 20, 25, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(40, 40, 50, 0.6);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .about-info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .about-info-card .icon-wrapper {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            margin-right: 15px;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .about-info-card .text-content {
+            flex-grow: 1;
+        }
+        .about-info-card h4 {
+            margin: 0 0 5px;
+            color: #a879ff;
+            font-size: 1.1em;
+        }
+        .about-info-card p {
+            margin: 0;
+            color: #b1b1b1;
+            font-size: 1em;
+        }
+        .about-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .pill {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6c63, #e340ff);
+            transition: transform 0.2s ease;
+        }
+        .pill:hover {
+            transform: scale(1.05);
+        }
+        .pill:nth-child(1) { background: linear-gradient(90deg, #ff40e3, #ff6c63); }
+        .pill:nth-child(2) { background: linear-gradient(90deg, #6c63ff, #e340ff); }
+        .pill:nth-child(3) { background: linear-gradient(90deg, #40ff8e, #6c63ff); }
+        .pill:nth-child(4) { background: linear-gradient(90deg, #ff8c40, #ff6c63); }
+
+        .achievement-card {
+            background-color: rgba(20, 20, 25, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(40, 40, 50, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            text-align: left;
+        }
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+        }
+        .achievement-card h4 {
+            margin-top: 0;
+            background: linear-gradient(90deg, #e340ff, #ff6c63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        .achievement-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .achievement-card li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            color: #b1b1b1;
+            position: relative;
+            padding-left: 20px;
+        }
+        .achievement-card li::before {
+            content: '•';
+            color: #8c63ff;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+        
+        .achievement-grid-left {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .header-content {
+                padding-right: 0;
+                order: 2;
+                margin-top: 30px;
+            }
+            .spline-container {
+                order: 1;
+                min-width: unset;
+                height: 300px;
+                margin-bottom: 0;
+                padding-left: 0;
+            }
+            .header-section h1 {
+                font-size: 3em;
+                text-align: center;
+            }
+            .header-section .subtitle, .header-section .intro-text {
+                text-align: center;
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2.2em;
+                padding-top: 60px;
+                margin-bottom: 30px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .card-grid {
+                gap: 20px;
+            }
+            .team-pyramid .leader-card {
+                max-width: 90%;
+                padding: 25px;
+            }
+            .team-pyramid .other-members {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-pyramid .other-members .card {
+                max-width: 90%;
+            }
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .link {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#team">Team Null</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+    <section id="home" class="header-section">
+        <div class="header-content">
+            <h1>Krish Choudhary</h1>
+            <p class="subtitle">B.Tech Student | AI/ML Enthusiast | Problem Solver</p>
+            <p class="intro-text">
+                Life is all about exploring and making the right choices. For me, this journey led to choosing **B.Tech in Artificial Intelligence and Machine Learning (AI/ML)** at GLA University. I'm building a strong foundation in cloud computing and actively exploring how AI can be applied in real-world applications.
+            </p>
+        </div>
+        <div class="spline-container">
+            <iframe src='https://my.spline.design/chatgptkeyboard-fg4mi05If590oMo096YL3S9k/' frameborder='0' class='spline-iframe'></iframe>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div>
+                <p>I'm a passionate **B.Tech student** with a strong foundation in technology and a drive for continuous learning and innovation. As the **leader of Team Null**, I focus on building skills in emerging technologies, earning industry certifications, and creating projects that solve real-world problems.</p>
+                <div class="about-pills">
+                    <span class="pill">Goal Oriented</span>
+                    <span class="pill">Quick Learner</span>
+                    <span class="pill">Tech Focused</span>
+                    <span class="pill">Innovation Driven</span>
+                </div>
+            </div>
+            <div>
+                <div class="about-info-card">
+                    <div class="icon-wrapper" style="background: linear-gradient(45deg, #1e90ff, #00bfff);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="text-content">
+                        <h4>Current Status</h4>
+                        <p>B.Tech Student - GLA 2nd Year</p>
+                    </div>
+                </div>
+                <div class="about-info-card">
+                    <div class="icon-wrapper" style="background: linear-gradient(45deg, #ff6347, #ff4500);">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text-content">
+                        <h4>Location</h4>
+                        <p>India - Building Global Skills</p>
+                    </div>
+                </div>
+                <div class="about-info-card">
+                    <div class="icon-wrapper" style="background: linear-gradient(45deg, #32cd32, #008000);">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="text-content">
+                        <h4>Focus Areas</h4>
+                        <p>Modern Tech Stack & Best Practices</p>
+                    </div>
+                </div>
+                <div class="about-info-card">
+                    <div class="icon-wrapper" style="background: linear-gradient(45deg, #8a2be2, #4b0082);">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="text-content">
+                        <h4>Achievement</h4>
+                        <p>Multiple Industry Certifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">Meet Team Null</h2>
+        <div class="team-pyramid">
+            <div class="leader-card card team-member">
+                <h3>Krish Choudhary</h3>
+                <p>Leading the vision and strategy for Team Null's innovative projects.</p>
+                <a href="https://www.linkedin.com/in/krish-choudhary-55b9a030b" class="link" target="_blank">LinkedIn</a>
+            </div>
+            <div class="other-members">
+                <div class="card team-member">
+                    <h3>Kavya Rajput</h3>
+                    <p>Building robust and responsive web applications with cutting-edge front-end technologies.</p>
+                    <a href="https://www.linkedin.com/in/kavya-rajput-431055370" class="link" target="_blank">LinkedIn</a>
+                </div>
+                <div class="card team-member">
+                    <h3>Krishna Mishra</h3>
+                    <p>Ensuring efficient data management and seamless integration for all project backends.</p>
+                    <a href="https://www.linkedin.com/in/krishna-mishra-107363326" class="link" target="_blank">LinkedIn</a>
+                </div>
+                <div class="card team-member">
+                    <h3>Shivansh Tripathi</h3>
+                    <p>Guiding strategic choices and optimizing workflows for project success.</p>
+                    <a href="https://www.linkedin.com/in/shivansh-tripathi-942882329" class="link" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>AI/ML Project</h3>
+                <p>Description of the AI/ML project. Explain what it does and what problem it solves. **Example:** A facial recognition system or a chatbot.</p>
+                <p><b>Technologies Used:</b> Python, Machine Learning Libraries (TensorFlow/PyTorch)</p>
+                <a href="#" class="link">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Web Development Project</h3>
+                <p>Description of a website or web application you built. **Example:** A responsive e-commerce site or a personal blog.</p>
+                <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
+                <a href="#" class="link">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Cloud/Data Analysis Project</h3>
+                <p>Description of a project involving data analysis or cloud services. **Example:** Analyzing a large dataset or deploying an application on a cloud platform.</p>
+                <p><b>Technologies Used:</b> AWS/Google Cloud, Python, Pandas</p>
+                <a href="#" class="link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2 class="section-title">Achievements & Certifications</h2>
+        <div class="achievement-grid-left">
+            <div class="achievement-card">
+                <h4>Artificial Intelligence & Machine Learning</h4>
+                <ul>
+                    <li>Fundamentals of ML and AI</li>
+                    <li>Introduction to AI - skillcred</li>
+                    <li>Artificial Intelligence Primer Certification</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Generative AI Unleashing</li>
+                    <li>Principles of Generative AI Certification</li>
+                    <li>OpenAI Generative Pre-trained Transformer 3</li>
+                    <li>Prompt Engineering</li>
+                    <li>Generative models for developers</li>
+                    <li>Deep Learning for Developers</li>
+                    <li>Introduction to Deep Learning</li>
+                    <li>Intro to NLP</li>
+                    <li>GenAI Powered Data Analytics Job Simulation</li>
+                    <li>Computer Vision 101</li>
+                </ul>
+            </div>
+            <div class="achievement-card">
+                <h4>Web Development & Data Science</h4>
+                <ul>
+                    <li>HTML Certificate</li>
+                    <li>CSS Certificate</li>
+                    <li>JavaScript Certificate</li>
+                    <li>Data Analysis</li>
+                    <li>Intro to DS</li>
+                    <li>Email Writing Skills</li>
+                </ul>
+            </div>
+            <div class="achievement-card">
+                <h4>Cloud, Security & Project Management</h4>
+                <ul>
+                    <li>Intro with AWS Cloud essentials</li>
+                    <li>Azure Certificate</li>
+                    <li>Cyber Security - Deloitte</li>
+                    <li>Agile Scrum in Practice</li>
+                    <li>Shadowfox Certificate</li>
+                    <li>Introduction to Robotic Process Automation</li>
+                </ul>
+            </div>
+            <div class="achievement-card">
+                <h4>Other Skills</h4>
+                <ul>
+                    <li>High Impact Presentations</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/krish-choudhary-55b9a030b" class="link" target="_blank">LinkedIn</a>
+            <a href="mailto:krishchaudhary03255@gmail.com" class="link">Email</a>
+            <a href="#" class="link" target="_blank">GitHub</a>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <p>Made by Team Null</p>
+    <p class="footer-small-text">Made by Team Member: Kavya (<a href="linkedin.com/in/kavya-rajput-431055370" style="color:#777;">Developer</a>)</p>
+</footer>
+
+</body>
+</html>
