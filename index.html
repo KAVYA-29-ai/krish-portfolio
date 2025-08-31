@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish Choudhary - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+        .header-section h1 {
+            font-size: 4.5em;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, #6c63ff, #e340ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-section .subtitle {
+            font-size: 1.4em;
+            color: #b1b1b1;
+        }
+        .header-section .intro-text {
+            font-size: 1.1em;
+            margin-top: 20px;
+            max-width: 700px;
+        }
+        .spline-model {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            margin: 30px auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            background: linear-gradient(90deg, #6c63ff, #e340ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: #1a1c25;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .card h3 {
+            margin-top: 0;
+            background: linear-gradient(90deg, #e340ff, #ff6c63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card .job-title {
+            font-weight: bold;
+            color: #a1a1a1;
+        }
+        .card .timeline {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .project-link, .certificate-link, .contact-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #6c63ff, #e340ff);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: opacity 0.3s;
+        }
+        .project-link:hover, .certificate-link:hover, .contact-link:hover {
+            opacity: 0.8;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.9/build/spline-viewer.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <section class="header-section">
+        <h2 class="section-title">The Leader of Team Null with AI Robot</h2>
+        <spline-viewer class="spline-model" url="https://prod.spline.design/b2a7B0c554983058b76c5b9c7b91d292a8315a6b09337f7a731d102e35a14d54/scene.splinecode"></spline-viewer>
+        <h1>Krish Choudhary</h1>
+        <p class="subtitle">B.Tech Student | AI/ML Enthusiast | Problem Solver</p>
+        <p class="intro-text">
+            Life is all about exploring and making the right choices. For me, this journey led to choosing **B.Tech in Artificial Intelligence and Machine Learning (AI/ML)** at GLA University. I'm building a strong foundation in cloud computing and actively exploring how AI can be applied in real-world applications.
+        </p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>I'm continuously expanding my knowledge in this domain, with a keen interest in creating responsive websites and implementing machine learning algorithms. I have hands-on experience with tools like **Python, Git & GitHub**, and platforms like **Google Cloud** and **AWS**.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>AI/ML Project</h3>
+                <p>Description of the AI/ML project. Explain what it does and what problem it solves. **Example:** A facial recognition system or a chatbot.</p>
+                <p><b>Technologies Used:</b> Python, Machine Learning Libraries (TensorFlow/PyTorch)</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Web Development Project</h3>
+                <p>Description of a website or web application you built. **Example:** A responsive e-commerce site or a personal blog.</p>
+                <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Cloud/Data Analysis Project</h3>
+                <p>Description of a project involving data analysis or cloud services. **Example:** Analyzing a large dataset or deploying an application on a cloud platform.</p>
+                <p><b>Technologies Used:</b> AWS/Google Cloud, Python, Pandas</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>GenAI Powered Data Analytics Job Simulation</h3>
+                <p class="job-title">Virtual Intern</p>
+                <p class="timeline">August 2025</p>
+                <p>Gained hands-on experience in using GenAI for data analysis and solving real-world business problems. Developed skills in prompt engineering and data visualization.</p>
+            </div>
+            <div class="card">
+                <h3>KRISH CHOUDHARY - Campus Ambassador</h3>
+                <p class="job-title">Campus Ambassador Program</p>
+                <p class="timeline">August 2025</p>
+                <p>Represented the company on campus, promoted events, and helped with outreach to other students. This highlights my communication and leadership skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <h2 class="section-title">Certificates</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>HTML, CSS, JavaScript</h3>
+                <p>Fundamental certificates in web development languages.</p>
+            </div>
+            <div class="card">
+                <h3>Python, Data Structures, & Algorithms</h3>
+                <p>Certificates in Python, problem-solving, and data analysis.</p>
+            </div>
+            <div class="card">
+                <h3>AI, ML, & Deep Learning</h3>
+                <p>Certificates in various AI fields including computer vision, generative AI, and deep learning.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud & Cyber Security</h3>
+                <p>Certificates for AWS, Azure, and cyber security.</p>
+            </div>
+            <div class="card">
+                <h3>Agile & Project Management</h3>
+                <p>Certificates in Agile Scrum and other project management concepts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/krish-choudhary-55b9a030b" class="contact-link" target="_blank">LinkedIn</a>
+            <a href="mailto:krishchaudhary03255@gmail.com" class="contact-link">Email</a>
+            <a href="#" class="contact-link" target="_blank">GitHub</a>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
