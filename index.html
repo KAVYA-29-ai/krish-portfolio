@@ -216,6 +216,11 @@
             gap: 30px;
             align-items: start;
         }
+        .about-grid > div:first-child p { /* Target the main descriptive paragraph */
+            font-size: 1.15em; /* Increased font size */
+            line-height: 1.8; /* Increased line height for readability */
+            color: #c9d1d9;
+        }
         .about-info-card {
             background-color: rgba(20, 20, 25, 0.8);
             padding: 25px;
@@ -244,6 +249,11 @@
             color: #fff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
+        /* Specific gradient for "My Approach" icon */
+        .about-info-card:first-child .icon-wrapper {
+            background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to Orange */
+        }
+
         .about-info-card .text-content {
             flex-grow: 1;
         }
@@ -255,29 +265,12 @@
         .about-info-card p {
             margin: 0;
             color: #b1b1b1;
-            font-size: 0.95em;
+            font-size: 1em; /* Increased font size for content within cards */
         }
-        .about-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
+        .about-pills { /* Removed as pills are now integrated into cards */
+            display: none; 
         }
-        .pill {
-            padding: 9px 18px;
-            border-radius: 25px;
-            font-size: 0.95em;
-            font-weight: 600;
-            color: #fff;
-            background: linear-gradient(90deg, #ff6c63, #e340ff);
-            transition: transform 0.2s ease;
-        }
-        .pill:hover {
-            transform: scale(1.05);
-        }
-        .pill:nth-child(2) { background: linear-gradient(90deg, #6c63ff, #e340ff); }
-        .pill:nth-child(3) { background: linear-gradient(90deg, #40ff8e, #6c63ff); }
-        .pill:nth-child(4) { background: linear-gradient(90deg, #ff8c40, #ff6c63); }
+
         .achievement-card {
             background-color: rgba(20, 20, 25, 0.8);
             padding: 30px;
@@ -411,7 +404,7 @@
             <div>
                 <p>I'm a passionate **B.Tech student** with a strong foundation in technology and a drive for continuous learning and innovation. As the **leader of Team Null**, I focus on building skills in emerging technologies, earning industry certifications, and creating projects that solve real-world problems.</p>
                 <div class="about-info-card">
-                    <div class="icon-wrapper" style="background: linear-gradient(45deg, #1e90ff, #00bfff);">
+                    <div class="icon-wrapper">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <div class="text-content">
