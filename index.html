@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0b0e1a;
+            background-color: #0d1117; /* Darker navy for the overall background */
             color: #e6edf3;
             margin: 0;
             padding: 0;
@@ -24,7 +24,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(11, 14, 26, 0.8);
+            background-color: rgba(13, 17, 23, 0.9); /* Slightly transparent dark navy */
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 15px 0;
@@ -47,13 +47,18 @@
         }
         .header-section {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: center; /* Align items vertically in the center */
+            justify-content: space-between; /* Space out the text and Spline model */
             min-height: 100vh;
-            text-align: center;
             padding: 0 20px;
             position: relative;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            text-align: left; /* Align text to the left */
+        }
+        .header-content {
+            flex: 1; /* Allow text content to take available space */
+            min-width: 300px; /* Minimum width for text content */
+            padding-right: 40px; /* Space between text and Spline model */
         }
         .header-section h1 {
             font-size: 4.5em;
@@ -61,22 +66,44 @@
             background: linear-gradient(90deg, #6c63ff, #e340ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: left; /* Ensure title is left-aligned */
         }
         .header-section .subtitle {
             font-size: 1.4em;
             color: #b1b1b1;
             margin-bottom: 20px;
+            text-align: left; /* Ensure subtitle is left-aligned */
         }
         .header-section .intro-text {
             font-size: 1.1em;
             margin-top: 20px;
             max-width: 700px;
+            text-align: left; /* Ensure intro text is left-aligned */
         }
-        .spline-model {
+        .spline-container {
+            flex: 1; /* Allow spline model to take available space */
+            min-width: 400px; /* Minimum width for Spline model */
+            height: 500px; /* Fixed height for the Spline model */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .spline-container h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #e340ff, #6c63ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        .spline-iframe {
             width: 100%;
-            max-width: 600px;
-            height: 400px;
-            margin: 30px auto;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
         .section-title {
             text-align: center;
@@ -85,6 +112,7 @@
             background: linear-gradient(90deg, #6c63ff, #e340ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            padding-top: 60px; /* Space from previous section/navbar */
         }
         .card-grid {
             display: grid;
@@ -93,7 +121,7 @@
             margin-bottom: 40px;
         }
         .card {
-            background-color: rgba(26, 28, 37, 0.7);
+            background-color: rgba(26, 28, 37, 0.7); /* Slightly transparent card background */
             padding: 25px;
             border-radius: 12px;
             border: 1px solid rgba(51, 51, 51, 0.5);
@@ -162,21 +190,11 @@
             margin-top: 5px;
             color: #555;
         }
-        .intro-card {
-            background-color: rgba(26, 28, 37, 0.7);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid rgba(51, 51, 51, 0.5);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            text-align: left;
-            margin: 40px auto;
-        }
         .about-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 25px;
-            align-items: center;
+            align-items: start; /* Align items to the start of the grid cell */
         }
         .about-info-card {
             background-color: rgba(26, 28, 37, 0.7);
@@ -237,8 +255,34 @@
             color: #b1b1b1;
             margin-bottom: 0;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-content {
+                padding-right: 0;
+                order: 2; /* Text content below Spline model on small screens */
+            }
+            .spline-container {
+                order: 1; /* Spline model above text content on small screens */
+                min-width: unset;
+                height: 350px;
+                margin-bottom: 30px;
+            }
+            .header-section h1, .header-section .subtitle, .header-section .intro-text {
+                text-align: center;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                padding-top: 40px;
+            }
+        }
     </style>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.9/build/spline-viewer.js"></script>
 </head>
 <body>
 
@@ -255,10 +299,17 @@
 
 <div class="container">
     <section id="home" class="header-section">
-        <h2 class="section-title">The Leader of Team Null with AI Robot</h2>
-        <spline-viewer class="spline-model" url="https://my.spline.design/chatgptkeyboard-fg4mi05If590oMo096YL3S9k/scene.splinecode"></spline-viewer>
-        <h1>Krish Choudhary</h1>
-        <p class="subtitle">B.Tech Student | AI/ML Enthusiast | Problem Solver</p>
+        <div class="header-content">
+            <h1>Krish Choudhary</h1>
+            <p class="subtitle">B.Tech Student | AI/ML Enthusiast | Problem Solver</p>
+            <p class="intro-text">
+                Life is all about exploring and making the right choices. For me, this journey led to choosing **B.Tech in Artificial Intelligence and Machine Learning (AI/ML)** at GLA University. I'm building a strong foundation in cloud computing and actively exploring how AI can be applied in real-world applications.
+            </p>
+        </div>
+        <div class="spline-container">
+            <h2>The Leader of Team Null with AI Robot</h2>
+            <iframe src='https://my.spline.design/chatgptkeyboard-fg4mi05If590oMo096YL3S9k/' frameborder='0' class='spline-iframe'></iframe>
+        </div>
     </section>
 
     <section id="about">
@@ -378,7 +429,7 @@
 
 <footer class="footer">
     <p>Made by Team Null</p>
-    <p class="footer-small-text">Made by Team Member: Kavya (<a href="linkedin.com/in/kavya-rajput-431055370" style="color:#777;">Kavya</a>)</p>
+    <p class="footer-small-text">Made by Team Member: Kavya (<a href="mailto:krishchaudhary03255@gmail.com" style="color:#777;">krishchaudhary03255@gmail.com</a>)</p>
 </footer>
 
 </body>
