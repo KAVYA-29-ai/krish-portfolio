@@ -28,6 +28,7 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         nav .nav-container {
             display: flex;
@@ -52,6 +53,7 @@
             min-height: 100vh;
             text-align: center;
             padding: 0 20px;
+            position: relative;
         }
         .header-section h1 {
             font-size: 4.5em;
@@ -63,6 +65,7 @@
         .header-section .subtitle {
             font-size: 1.4em;
             color: #b1b1b1;
+            margin-bottom: 20px;
         }
         .header-section .intro-text {
             font-size: 1.1em;
@@ -87,6 +90,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
         .card {
             background-color: rgba(26, 28, 37, 0.7);
@@ -158,6 +162,81 @@
             margin-top: 5px;
             color: #555;
         }
+        .intro-card {
+            background-color: rgba(26, 28, 37, 0.7);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(51, 51, 51, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: left;
+            margin: 40px auto;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+        .about-info-card {
+            background-color: rgba(26, 28, 37, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(51, 51, 51, 0.5);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .about-info-card h4 {
+            margin: 0 0 5px;
+            color: #8c88ff;
+        }
+        .about-info-card p {
+            margin: 0;
+            color: #b1b1b1;
+        }
+        .about-info-card:hover {
+            transform: translateY(-5px);
+        }
+        .about-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .pill {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6c63, #e340ff);
+        }
+        .pill:nth-child(2) { background: linear-gradient(90deg, #6c63ff, #e340ff); }
+        .pill:nth-child(3) { background: linear-gradient(90deg, #40ff8e, #6c63ff); }
+        .pill:nth-child(4) { background: linear-gradient(90deg, #ff8c40, #ff6c63); }
+        .achievement-card {
+            background-color: rgba(26, 28, 37, 0.7);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(51, 51, 51, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+        .achievement-card:hover {
+            transform: translateY(-8px);
+        }
+        .achievement-card h4 {
+            margin-top: 0;
+            background: linear-gradient(90deg, #e340ff, #ff6c63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .achievement-card p {
+            font-size: 0.9em;
+            color: #b1b1b1;
+            margin-bottom: 0;
+        }
     </style>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.9/build/spline-viewer.js"></script>
 </head>
@@ -177,18 +256,41 @@
 <div class="container">
     <section id="home" class="header-section">
         <h2 class="section-title">The Leader of Team Null with AI Robot</h2>
-        <spline-viewer class="spline-model" url="https://prod.spline.design/5e4b79df-0d9a-4f54-8f73-4ac13505e71a/scene.splinecode"></spline-viewer>
+        <spline-viewer class="spline-model" url="https://my.spline.design/chatgptkeyboard-fg4mi05If590oMo096YL3S9k/scene.splinecode"></spline-viewer>
         <h1>Krish Choudhary</h1>
         <p class="subtitle">B.Tech Student | AI/ML Enthusiast | Problem Solver</p>
-        <p class="intro-text">
-            Life is all about exploring and making the right choices. For me, this journey led to choosing **B.Tech in Artificial Intelligence and Machine Learning (AI/ML)** at GLA University. I'm building a strong foundation in cloud computing and actively exploring how AI can be applied in real-world applications.
-        </p>
     </section>
 
     <section id="about">
         <h2 class="section-title">About Me</h2>
-        <div class="card">
-            <p>I'm continuously expanding my knowledge in this domain, with a keen interest in creating responsive websites and implementing machine learning algorithms. I have hands-on experience with tools like **Python, Git & GitHub**, and platforms like **Google Cloud** and **AWS**.</p>
+        <div class="about-grid">
+            <div>
+                <p>I'm a passionate **B.Tech student** with a strong foundation in technology and a drive for continuous learning and innovation. My journey involves building skills across various technologies, earning industry certifications, and creating projects that solve real-world problems.</p>
+                <div class="about-pills">
+                    <span class="pill">Goal Oriented</span>
+                    <span class="pill">Quick Learner</span>
+                    <span class="pill">Tech Focused</span>
+                    <span class="pill">Innovation Driven</span>
+                </div>
+            </div>
+            <div>
+                <div class="about-info-card">
+                    <h4>Current Status</h4>
+                    <p>B.Tech Student - GLA 2nd Year</p>
+                </div>
+                <div class="about-info-card">
+                    <h4>Location</h4>
+                    <p>India - Building Global Skills</p>
+                </div>
+                <div class="about-info-card">
+                    <h4>Focus Areas</h4>
+                    <p>Modern Tech Stack & Best Practices</p>
+                </div>
+                <div class="about-info-card">
+                    <h4>Achievement</h4>
+                    <p>Multiple Industry Certifications</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -245,45 +347,21 @@
     <section id="achievements">
         <h2 class="section-title">Achievements & Certifications</h2>
         <div class="card-grid">
-            <div class="card">
-                <h3>Artificial Intelligence & Machine Learning</h3>
-                <ul>
-                    <li>Introduction to AI - skillcred</li>
-                    <li>Principles of Generative AI</li>
-                    <li>OpenAI Generative Pre-trained Transformer 3</li>
-                    <li>Intro to AI</li>
-                    <li>Fundamentals of ML and AI</li>
-                    <li>Generative AI Unleashing</li>
-                    <li>GenAI Powered Data Analytics Job Simulation</li>
-                    <li>Generative models for developers</li>
-                    <li>Deep Learning for Developers</li>
-                    <li>Introduction to Deep Learning</li>
-                    <li>Intro to NLP</li>
-                    <li>Time Management</li>
-                    <li>High Impact Presentations</li>
-                </ul>
+            <div class="achievement-card">
+                <h4>Artificial Intelligence & Machine Learning</h4>
+                <p>A collection of certifications in core AI/ML concepts, including generative AI, deep learning, and practical applications.</p>
             </div>
-            <div class="card">
-                <h3>Web Development & Data Science</h3>
-                <ul>
-                    <li>HTML Certificate</li>
-                    <li>CSS Certificate</li>
-                    <li>JavaScript Certificate</li>
-                    <li>Data Analysis</li>
-                    <li>Intro to DS</li>
-                    <li>Email Writing Skills</li>
-                </ul>
+            <div class="achievement-card">
+                <h4>Web Development & Data Science</h4>
+                <p>Certifications in fundamental web technologies like HTML, CSS, and JavaScript, along with data analysis skills.</p>
             </div>
-            <div class="card">
-                <h3>Cloud, Security & Project Management</h3>
-                <ul>
-                    <li>Intro with AWS Cloud essentials</li>
-                    <li>Azure Certificate</li>
-                    <li>Cyber Security - Deloitte</li>
-                    <li>Intro to Robotic Process Automation</li>
-                    <li>Agile Scrum in Practice</li>
-                    <li>Shadowfox Certificate</li>
-                </ul>
+            <div class="achievement-card">
+                <h4>Cloud, Security & Project Management</h4>
+                <p>Credentials in cloud computing platforms, cybersecurity, and agile methodologies for effective project handling.</p>
+            </div>
+            <div class="achievement-card">
+                <h4>Additional Skills</h4>
+                <p>Certificates for high-impact presentations, time management, and other professional development topics.</p>
             </div>
         </div>
     </section>
@@ -296,12 +374,11 @@
             <a href="#" class="link" target="_blank">GitHub</a>
         </div>
     </section>
-
 </div>
 
 <footer class="footer">
     <p>Made by Team Null</p>
-    <p class="footer-small-text">Made by Team Member: Kavya (<a href="mailto:krishchaudhary03255@gmail.com" style="color:#777;">krishchaudhary03255@gmail.com</a>)</p>
+    <p class="footer-small-text">Made by Team Member: Kavya (<a href="linkedin.com/in/kavya-rajput-431055370" style="color:#777;">Kavya</a>)</p>
 </footer>
 
 </body>
