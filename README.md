@@ -1,5 +1,5 @@
 # krish-portfolio
-my best friend krish chaudhary portfolio
+Krish CHouudhary portfolio
 <!DOCTYPE html>
 <html lang="en">
 <head>
